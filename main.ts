@@ -12,8 +12,8 @@ if ( isNaN(port) ) {
 
 // Your code goes here
 const body = "Hello Universe..."
-const s = serve( { port: port, hostname: '0.0.0.0' } )
-console.log("Server running on http://localhost:" + port)
+const s = serve( { port } )
+// console.log("Server running on http://localhost:" + port)
 
 for await (const req of s) {
   req.respond( { body } )
